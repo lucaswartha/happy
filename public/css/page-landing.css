@@ -1,62 +1,65 @@
-#page-landing {
-  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%) no-repeat;
-  min-height: 100vh;
+#page-landing{
+  background: linear-gradient(329.54deg, #29b6d1 50%, #00c7c7 100%);
+
   text-align: center;
+  min-height: 100vh;
+
   display: flex;
 }
 
-#container {
+#container{
   margin: auto;
   width: min(90%, 112rem);
 }
 
-.location,
-h1,
-.visit p {
+.location, h1, .visit p{
   height: 16vh;
 }
 
-.visit a {
+#logo{
+  animation-delay: 50ms;
+}
+
+.location{
+  animation-delay: 100ms;
+}
+
+main h1{
+  animation-delay: 150ms;
+  font-size: clamp(4rem, 8vw, 8.4rem);
+}
+
+.visit p{
+  animation-delay: 200ms;
+}
+
+.visit a{
   width: 8rem;
   height: 8rem;
   background: #ffd666;
+  
   border: none;
   border-radius: 3rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2ms;
-  animation-delay: 250ms;
+  margin: auto;
+
+  transition: background 200ms;
+  animation-delay: 200ms;
 }
 
 .visit a:hover {
   background: #96feff;
 }
 
-#logo {
-  animation-delay: 50ms;
-}
-
-.location {
-  animation-delay: 100ms;
-}
-
-main h1 {
-  animation-delay: 150ms;
-}
-
-.visit p {
-  animation-delay: 200ms;
-}
-
 /* desktop version */
-@media (min-width: 768px) {
-  #container {
-    /* shorthand background: image repeat position / size */
-    background: url("../images/bg.svg") no-repeat 80% /
-      clamp(30rem, 50vw, 56rem);
-    background-position: center;
-    padding: 13rem 2rem;
+@media (min-width: 760px){
+  #container{
+    padding: 5rem 2rem;
+
+    background: url("../images/bg.svg") no-repeat 80% / clamp(30rem, 54vw, 56rem);
   }
 
   header {
@@ -65,41 +68,39 @@ main h1 {
     justify-content: space-between;
   }
 
-  .location,
-  h1,
-  .visit p {
-    height: initial;
+  .location, h1, .visit p{
+    height: initial; 
     text-align: initial;
   }
 
-  .location {
+  .location{
     text-align: right;
     font-size: 2.4rem;
     line-height: 1.5;
   }
 
-  main h1 {
+  main h1{
     font-weight: bold;
-    line-height: 0.88;
+    line-height: .88;
 
     margin: clamp(10%, 9vh, 12%) 0 4rem;
 
     width: min(300px, 80%);
   }
-
-  .visit {
+  
+  .visit{
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-
-  .visit p {
+  
+  .visit p{
     font-size: 2.4rem;
-    line-height: 1.5;
+    line-height:  1.5;
     width: clamp(20rem, 20vw, 30rem);
   }
-
-  .visit a {
+  
+  .visit a{
     margin: initial;
-  }
+  } 
 }
